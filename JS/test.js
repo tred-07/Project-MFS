@@ -7,7 +7,7 @@ document.getElementById('add-money').addEventListener('click', function (event) 
     const availableBalance = parseFloat(document.getElementById('availableBalance').innerText);
     if (pin === '1234') {
         console.log(availableBalance);
-        document.getElementById('availableBalance').innerText=availableBalance+addMoneyAmount;
+        document.getElementById('availableBalance').innerText=availableBalance+addMoneyAmount+' $';
         console.log(availableBalance);
         console.log('added');
     }
@@ -26,7 +26,7 @@ document.getElementById('cash-out').addEventListener('click',function(event){
         const availableBalance=document.getElementById('availableBalance').innerText;
         console.log(availableBalance);
         const total=parseFloat(availableBalance)-parseFloat(casOutAmount);
-        if(total>0) document.getElementById('availableBalance').innerText=total;
+        if(total>0) document.getElementById('availableBalance').innerText=total+' $';
         else alert("Insufficient Balance")
     }
     else alert("Invalid data");
