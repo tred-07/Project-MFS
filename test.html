@@ -13,28 +13,30 @@
 <body>
     <main>
         <section id="phone" class="flex justify-center">
-            <div class="mockup-phone border-primary">
+            <div class="mockup-phone border-primary stats-vertical">
                 <div class="camera"></div>
                 <div class="display">
                     <div class="artboard artboard-demo phone-1">
                         <!-- Availabe Balance -->
                         <div class="stats shadow">
                             <div class="stat">
-                                <div class="stat-value"><p id="availableBalance">8000</p></div>
+                                <div class="stat-value" id="availableBalance">
+                                    8000
+                                </div>
                                 <div class="stat-desc">Available balance</div>
                             </div>
                         </div>
                         <!-- <div class="divider"></div> -->
-                         <br>
+                        <br>
                         <!-- User action button -->
                         <div>
-                            <button class="btn btn-outline btn-success">Add Money</button>
-                            <button class="btn btn-outline btn-error">Cash Out</button>
+                            <button class="btn btn-outline btn-success" id="add-money-button">Add Money</button>
+                            <button class="btn btn-outline btn-error" id="cash-out-button">Cash Out</button>
                         </div>
                         <!-- <div class="divider"></div> -->
                         <!-- Add money form -->
-                         <br>
-                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <br>
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl" id="add-money-form">
                             <form class="card-body">
                                 <div class="form-control">
                                     <label class="label">
@@ -56,12 +58,36 @@
                                 </div>
                             </form>
                         </div>
+                        <!-- Cash Out -->
+                        <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl" id="cash-out-form">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Amount</span>
+                                    </label>
+                                    <input type="number" id="cash-out-amount" placeholder="Amount"
+                                        class="input input-bordered" autocomplete="off" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">PIN</span>
+                                    </label>
+                                    <input type="password" id="cash-pIN" placeholder="PIN" class="input input-bordered"
+                                        autocomplete="off" required />
+
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button class="btn btn-primary" id="cash-out">Cash Out</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <script src="./JS/test.js"></script>
+    <script src="./JS/features.js"></script>
 </body>
 
 </html>

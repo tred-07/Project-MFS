@@ -15,3 +15,19 @@ document.getElementById('add-money').addEventListener('click', function (event) 
         alert("Invalid data");
     }
 })
+
+document.getElementById('cash-out').addEventListener('click',function(event){
+    event.preventDefault();
+    const pin=document.getElementById('cash-pIN').value;
+    console.log(pin);
+    const casOutAmount=parseFloat(document.getElementById('cash-out-amount').value);
+    console.log(casOutAmount);
+    if(pin==='1234'){
+        const availableBalance=document.getElementById('availableBalance').innerText;
+        console.log(availableBalance);
+        const total=parseFloat(availableBalance)-parseFloat(casOutAmount);
+        if(total>0) document.getElementById('availableBalance').innerText=total;
+        else alert("Insufficient Balance")
+    }
+    else alert("Invalid data");
+})
